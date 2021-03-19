@@ -1,0 +1,12 @@
+// ::placeholder {
+//   color: gray;
+// }
+
+.test {
+  // display: flex;
+  transform: translateX(200px);
+  p {
+    background-color: #f0f;
+    width: percentage(5/7);
+  }
+}

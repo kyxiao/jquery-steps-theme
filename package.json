@@ -1,0 +1,31 @@
+{
+  "name": "jquery-steps-theme",
+  "version": "1.0.0",
+  "description": "jquery-steps-theme",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyxiao/jquery-steps-theme.git"
+  },
+  "keywords": [
+    "jquery-steps-theme",
+    "steps",
+    "scss"
+  ],
+  "author": "kyxiao",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

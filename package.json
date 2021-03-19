@@ -1,8 +1,7 @@
 {
   "name": "jquery-steps-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jquery-steps-theme",
-  "main": "index.js",
   "scripts": {
     "dev": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"

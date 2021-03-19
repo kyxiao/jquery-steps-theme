@@ -7,6 +7,8 @@
 使用方法很简单，参照原插件，设置 `cssClass` 就可以了
 
 ```js
+import "jquery-steps-theme/dist/css/style.css";
+
 $("#example-basic").steps({
   headerTag: "h3",
   bodyTag: "section",

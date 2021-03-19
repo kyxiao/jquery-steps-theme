@@ -21,7 +21,7 @@ $("#example-basic").steps({
 });
 ```
 
-[查看Demo]()
+[查看Demo](https://kyxiao.github.io/jquery-steps-theme/)
 
 ## 运行
 

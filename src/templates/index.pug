@@ -4,8 +4,62 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible",content="IE=edge")
     meta(name="viewport",content="width=device-width, initial-scale=1.0")
-    title Document
+    title jquery-steps-theme
     link(rel="stylesheet", href="./css/style.css")
   body
-    .test#box 123
-      p 44445550
+    mixin text
+      p 填写账户信息填写账户信息填写账户信息填写账户信息填写账户信息填写账户信息，填写账户信息填写账户信息，填写账户信息填写账户信息。
+    mixin list 
+      h3 填写账户信息
+      section
+        +text
+      h3 验证账户信息
+      section
+        +text
+      h3 注册成功
+      section
+        +text
+    mixin list2
+      h3
+        strong 阅读并签订开店须知
+        small 确认自己符合相关规定
+      section
+        +text
+      h3
+        strong 填写审核信息
+        small 需提供审核所需材料
+      section
+        +text
+      h3
+        strong 签订合同与缴纳费用
+        small 与平台签订合同
+      section
+        +text
+      h3
+        strong 店铺开通成功
+        small 恭喜您店铺开通成功
+      section
+        +text
+    .demo
+      h2 基本示例
+      #example1
+        +list
+      h2 基本示例（垂直）
+      #example2
+        +list
+      h2 圆形
+      #example3
+        +list
+      h2 圆形（垂直）
+      #example4
+        +list
+      h2 选项卡
+      #example5
+        +list
+      h2 个性化拓展
+      #example6
+        +list2
+
+    script(src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://cdn.bootcdn.net/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js")  
+    script(src="./js/app.min.js") 

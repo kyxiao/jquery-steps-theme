@@ -1,0 +1,206 @@
+// custom jquery-steps style
+// https://github.com/rstaib/jquery-steps
+
+$theme-color: #fe9901;
+
+%sector {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 54px;
+  height: 54px;
+  transform: scale(0.707) rotate(45deg);
+  border-bottom-left-radius: 50px;
+}
+
+.wizard {
+  width: 100%;
+  .steps {
+    margin-bottom: 20px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        display: table-cell;
+        width: 1%;
+        &:not(:first-child) {
+          a {
+            &::before {
+              @extend %sector;
+              left: -27px;
+              background-color: #fff;
+            }
+          }
+        }
+        &:not(:last-child) {
+          // 10|20|30
+          padding-right: 20px;
+          a {
+            &::after {
+              @extend %sector;
+              right: -27px;
+              background-color: #eef9ff;
+              z-index: 1;
+            }
+          }
+        }
+        a {
+          position: relative;
+          display: block;
+          padding: 10px 0 10px 27px;
+          background-color: #eef9ff;
+          text-decoration: none;
+          text-align: center;
+          font-size: 16px;
+          color: #aaa;
+          white-space: nowrap;
+        }
+      }
+    }
+    .current {
+      &:not(:last-child) {
+        a {
+          &::after {
+            background-color: $theme-color;
+          }
+        }
+      }
+      a {
+        background-color: $theme-color;
+        color: #fff;
+        .number {
+          background-color: #fff;
+          color: $theme-color;
+        }
+      }
+      &-info {
+        display: none;
+      }
+    }
+    // .done {
+    //   a {
+    //     background-color: #9dc8e2;
+    //     color: #fff;
+    //   }
+    // }
+    // .disabled {
+    //   a {
+    //     background-color: #eef9ff;
+    //     color: #aaa;
+    //   }
+    // }
+    // .error {
+    //   a {
+    //     background-color: #ff3111;
+    //     color: #fff;
+    //   }
+    // }
+    .number {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      margin-right: 10px;
+      border-radius: 100%;
+      background-color: #a6d2eb;
+      text-align: center;
+      line-height: 34px;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+  .content {
+    position: relative;
+    // TODO: repair auto-height
+    min-height: 100px;
+    overflow: hidden;
+    .title {
+      display: none;
+    }
+    .body {
+      float: left;
+      // position: absolute;
+      width: 100%;
+    }
+  }
+  .actions {
+    float: right;
+    ul {
+      margin: 10px 0;
+      padding: 0;
+      overflow: hidden;
+      li {
+        list-style: none;
+        float: left;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-left: 20px;
+      border-radius: 5px;
+      background-color: $theme-color;
+      text-decoration: none;
+      color: #fff;
+    }
+    .disabled {
+      a {
+        background-color: #eee;
+        color: #aaa;
+      }
+    }
+  }
+  &.vertical {
+    .steps {
+      float: left;
+      width: 25%;
+      ul {
+        li {
+          display: block;
+          width: 100%;
+          margin-bottom: 20px;
+          a {
+            text-align: left;
+            &::before {
+              display: none;
+            }
+          }
+          &:last-child {
+            padding-right: 20px;
+            a {
+              &::after {
+                @extend %sector;
+                right: -27px;
+                background-color: #eef9ff;
+                z-index: 1;
+              }
+            }
+          }
+        }
+        .current {
+          &:last-child {
+            a {
+              &::after {
+                background-color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      float: left;
+      margin-left: 2%;
+      width: 73%;
+    }
+  }
+  // validate
+  label.error {
+    color: #8a1f11;
+  }
+  input.error {
+    background-color: #fbe3e4;
+    border: 1px solid #fbc2c4;
+    color: #8a1f11;
+  }
+}

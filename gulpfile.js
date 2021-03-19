@@ -32,6 +32,7 @@ function jsTask() {
 function watchTask() {
   watch("src/templates/**", htmlTask);
   watch("src/sass/**", cssTask);
+  watch("src/js/**", jsTask);
 }
 
 function serverTask() {

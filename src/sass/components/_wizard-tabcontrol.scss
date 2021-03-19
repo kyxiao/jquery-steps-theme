@@ -1,0 +1,59 @@
+// custom jquery-steps style
+// cssClass: "wizard-tabcontrol"
+// https://github.com/rstaib/jquery-steps
+
+$theme-color: #fe9901;
+
+.wizard-tabcontrol {
+  .steps {
+    ul {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: 1px;
+      z-index: 1;
+      li {
+        list-style: none;
+        float: left;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 10px 30px;
+      text-decoration: none;
+      color: #333;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    .current {
+      border-left: 1px solid #bbb;
+      border-top: 1px solid #bbb;
+      border-right: 1px solid #bbb;
+      background-color: #fff;
+      a {
+        color: $theme-color;
+      }
+      &-info {
+        display: none;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    // TODO: repair auto-height
+    min-height: 100px;
+    border-top: 1px solid #bbb;
+    overflow: hidden;
+    .title {
+      display: none;
+    }
+    .body {
+      float: left;
+      // position: absolute;
+      width: 100%;
+    }
+  }
+}

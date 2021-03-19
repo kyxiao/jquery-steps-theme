@@ -1,12 +1,29 @@
-// ::placeholder {
-//   color: gray;
-// }
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
 
-.test {
-  // display: flex;
-  transform: translateX(200px);
-  p {
-    background-color: #f0f;
-    width: percentage(5/7);
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.demo {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 12px 5px #e7e7e7;
+  h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
   }
 }

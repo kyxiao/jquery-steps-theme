@@ -1,0 +1,186 @@
+// custom jquery-steps style
+// cssClass: "wizard-round"
+// https://github.com/rstaib/jquery-steps
+
+$theme-color: #fe9901;
+$vertical-left: 20px;
+
+.wizard-round {
+  width: 100%;
+  margin-top: 40px;
+  .steps {
+    margin-bottom: 20px;
+    ul {
+      margin: 0;
+      padding: 0;
+      counter-reset: flag;
+      li {
+        list-style: none;
+        display: table-cell;
+        width: 1%;
+        &:first-child {
+          a {
+            &::after {
+              left: 20%;
+              border-radius: 5px 0 0 5px;
+            }
+          }
+        }
+        &:last-child {
+          a {
+            &::after {
+              right: 20%;
+              border-radius: 0 5px 5px 0;
+            }
+          }
+        }
+        a {
+          position: relative;
+          display: block;
+          padding: 10px 15px;
+          text-decoration: none;
+          text-align: center;
+          font-size: 14px;
+          color: #ebebeb;
+          white-space: nowrap;
+          &::before {
+            content: counter(flag);
+            counter-increment: flag;
+            position: absolute;
+            top: -32px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 0 5px #ebebeb;
+            line-height: 32px;
+            z-index: 2;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -48%;
+            background-color: #ebebeb;
+            z-index: 1;
+            height: 8px;
+          }
+        }
+      }
+    }
+    .current {
+      &-info {
+        display: none;
+      }
+    }
+    .current,
+    .done {
+      a {
+        color: $theme-color;
+        &::before {
+          background-color: $theme-color;
+          color: #fff;
+        }
+        &::after {
+          background-color: $theme-color;
+        }
+      }
+    }
+  }
+  .content {
+    position: relative;
+    // TODO: repair auto-height
+    min-height: 100px;
+    overflow: hidden;
+    .title {
+      display: none;
+    }
+    .body {
+      float: left;
+      // position: absolute;
+      width: 100%;
+    }
+  }
+  .actions {
+    float: right;
+    ul {
+      margin: 10px 0;
+      padding: 0;
+      overflow: hidden;
+      li {
+        list-style: none;
+        float: left;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-left: 20px;
+      border-radius: 5px;
+      background-color: $theme-color;
+      text-decoration: none;
+      color: #fff;
+    }
+    .disabled {
+      a {
+        background-color: #eee;
+        color: #aaa;
+      }
+    }
+  }
+  &.vertical {
+    .steps {
+      float: left;
+      width: 25%;
+      ul {
+        li {
+          display: block;
+          width: 100%;
+          height: 100px;
+          a {
+            height: 100%;
+            padding-left: $vertical-left + 50px;
+            text-align: left;
+            &::before {
+              top: 5px;
+              left: $vertical-left;
+              right: auto;
+              text-align: center;
+            }
+            &::after {
+              left: $vertical-left + 12px;
+              right: auto;
+              top: 2px;
+              bottom: 0;
+              height: auto;
+              width: 8px;
+            }
+          }
+          &:first-child {
+            a {
+              &::after {
+                border-radius: 0;
+              }
+            }
+          }
+          &:last-child {
+            a {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      float: left;
+      margin-left: 2%;
+      width: 73%;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 $(function () {
-  console.log(111122);
   $("#example1").steps({
     headerTag: "h3",
     bodyTag: "section",

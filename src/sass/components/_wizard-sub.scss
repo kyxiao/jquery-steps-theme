@@ -1,9 +1,7 @@
 // custom jquery-steps style
 // cssClass: "wizard-sub"
 // https://github.com/rstaib/jquery-steps
-
-$theme-color: #de4d88;
-$step-height: 88px;
+@import "variables";
 
 %sector-sub {
   content: "";
@@ -11,7 +9,7 @@ $step-height: 88px;
   top: 0;
   width: 0;
   height: 0;
-  border-left: $step-height solid transparent;
+  border-left: $wizard-sub-step-height solid transparent;
   transform: scale(0.707) rotate(45deg);
 }
 
@@ -22,7 +20,7 @@ $step-height: 88px;
     overflow: hidden;
     ul {
       width: 100%;
-      margin: 0 0 0 10px-($step-height*0.5);
+      margin: 0 0 0 10px-($wizard-sub-step-height*0.5);
       padding: 0;
       li {
         list-style: none;
@@ -33,8 +31,8 @@ $step-height: 88px;
           a {
             &::before {
               @extend %sector-sub;
-              left: -($step-height*0.5);
-              border-top: $step-height solid #fff;
+              left: -($wizard-sub-step-height*0.5);
+              border-top: $wizard-sub-step-height solid #fff;
             }
           }
         }
@@ -42,16 +40,16 @@ $step-height: 88px;
           position: relative;
           display: block;
           box-sizing: border-box;
-          height: $step-height;
+          height: $wizard-sub-step-height;
           line-height: 24px;
           padding-top: 21px;
-          padding-left: $step-height;
+          padding-left: $wizard-sub-step-height;
           background-color: #f9c8dd;
           text-decoration: none;
           &::after {
             @extend %sector-sub;
-            right: -($step-height*0.5);
-            border-top: $step-height solid #f9c8dd;
+            right: -($wizard-sub-step-height*0.5);
+            border-top: $wizard-sub-step-height solid #f9c8dd;
             z-index: 1;
           }
         }
@@ -65,10 +63,10 @@ $step-height: 88px;
     .current,
     .done {
       a {
-        background-color: $theme-color;
+        background-color: $wizard-sub-theme-color;
         color: #fff;
         &::after {
-          border-top: $step-height solid $theme-color;
+          border-top: $wizard-sub-step-height solid $wizard-sub-theme-color;
         }
       }
       small{
@@ -87,8 +85,8 @@ $step-height: 88px;
       left: 50px;
       top: 0;
       width: 50px;
-      height: $step-height;
-      line-height: $step-height;
+      height: $wizard-sub-step-height;
+      line-height: $wizard-sub-step-height;
       font-size: 54px;
     }
     strong {
@@ -132,7 +130,7 @@ $step-height: 88px;
       padding: 5px 10px;
       margin-left: 20px;
       border-radius: 5px;
-      background-color: $theme-color;
+      background-color: $wizard-sub-theme-color;
       text-decoration: none;
       color: #fff;
     }

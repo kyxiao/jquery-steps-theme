@@ -2,7 +2,7 @@
 // cssClass: "wizard-tabcontrol"
 // https://github.com/rstaib/jquery-steps
 
-$theme-color: #fe9901;
+@import "variables";
 
 .wizard-tabcontrol {
   .steps {
@@ -25,7 +25,7 @@ $theme-color: #fe9901;
       text-decoration: none;
       color: #333;
       &:hover {
-        color: $theme-color;
+        color: $wizard-tabcontrol-theme-color;
       }
     }
     .current {
@@ -34,7 +34,7 @@ $theme-color: #fe9901;
       border-right: 1px solid #bbb;
       background-color: #fff;
       a {
-        color: $theme-color;
+        color: $wizard-tabcontrol-theme-color;
       }
       &-info {
         display: none;

@@ -1,7 +1,7 @@
 // custom jquery-steps style
 // https://github.com/rstaib/jquery-steps
 
-$theme-color: #fe9901;
+@import "variables";
 
 %sector {
   content: "";
@@ -62,16 +62,16 @@ $theme-color: #fe9901;
       &:not(:last-child) {
         a {
           &::after {
-            background-color: $theme-color;
+            background-color: $wizard-theme-color;
           }
         }
       }
       a {
-        background-color: $theme-color;
+        background-color: $wizard-theme-color;
         color: #fff;
         .number {
           background-color: #fff;
-          color: $theme-color;
+          color: $wizard-theme-color;
         }
       }
       &-info {
@@ -139,7 +139,7 @@ $theme-color: #fe9901;
       padding: 5px 10px;
       margin-left: 20px;
       border-radius: 5px;
-      background-color: $theme-color;
+      background-color: $wizard-theme-color;
       text-decoration: none;
       color: #fff;
     }
@@ -181,7 +181,7 @@ $theme-color: #fe9901;
           &:last-child {
             a {
               &::after {
-                background-color: $theme-color;
+                background-color: $wizard-theme-color;
               }
             }
           }

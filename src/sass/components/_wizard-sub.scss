@@ -22,7 +22,7 @@ $step-height: 88px;
     overflow: hidden;
     ul {
       width: 100%;
-      margin: 0 0 0 10px-($step-height/2);
+      margin: 0 0 0 10px-($step-height*0.5);
       padding: 0;
       li {
         list-style: none;
@@ -33,7 +33,7 @@ $step-height: 88px;
           a {
             &::before {
               @extend %sector-sub;
-              left: -($step-height/2);
+              left: -($step-height*0.5);
               border-top: $step-height solid #fff;
             }
           }
@@ -50,7 +50,7 @@ $step-height: 88px;
           text-decoration: none;
           &::after {
             @extend %sector-sub;
-            right: -($step-height/2);
+            right: -($step-height*0.5);
             border-top: $step-height solid #f9c8dd;
             z-index: 1;
           }

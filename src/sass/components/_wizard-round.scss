@@ -1,9 +1,7 @@
 // custom jquery-steps style
 // cssClass: "wizard-round"
 // https://github.com/rstaib/jquery-steps
-
-$theme-color: #fe9901;
-$vertical-left: 20px;
+@import "variables";
 
 .wizard-round {
   width: 100%;
@@ -41,7 +39,7 @@ $vertical-left: 20px;
           text-decoration: none;
           text-align: center;
           font-size: 14px;
-          color: #ebebeb;
+          color: $inactive-font-color;
           white-space: nowrap;
           &::before {
             content: counter(flag);
@@ -65,7 +63,7 @@ $vertical-left: 20px;
             left: 0;
             right: 0;
             top: -48%;
-            background-color: #ebebeb;
+            background-color:#ebebeb;
             z-index: 1;
             height: 8px;
           }
@@ -80,13 +78,13 @@ $vertical-left: 20px;
     .current,
     .done {
       a {
-        color: $theme-color;
+        color: $wizard-round-theme-color;
         &::before {
-          background-color: $theme-color;
+          background-color: $wizard-round-theme-color;
           color: #fff;
         }
         &::after {
-          background-color: $theme-color;
+          background-color: $wizard-round-theme-color;
         }
       }
     }
@@ -121,7 +119,7 @@ $vertical-left: 20px;
       padding: 5px 10px;
       margin-left: 20px;
       border-radius: 5px;
-      background-color: $theme-color;
+      background-color: $wizard-round-theme-color;
       text-decoration: none;
       color: #fff;
     }
@@ -143,16 +141,16 @@ $vertical-left: 20px;
           height: 100px;
           a {
             height: 100%;
-            padding-left: $vertical-left + 50px;
+            padding-left: $wizard-round-vertical-left + 50px;
             text-align: left;
             &::before {
               top: 5px;
-              left: $vertical-left;
+              left: $wizard-round-vertical-left;
               right: auto;
               text-align: center;
             }
             &::after {
-              left: $vertical-left + 12px;
+              left: $wizard-round-vertical-left + 12px;
               right: auto;
               top: 2px;
               bottom: 0;
